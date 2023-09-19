@@ -5,16 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/797d614b47.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <title>Spotify</title>
 </head>
-<body class="debug">
+<body class="debugg">
     <div class="container-lg height-100">
         <div class="flex-col height-100">
             <div class="col grow-1 row body-content">
                 <div class="col sidebar"></div>
                 <main class="col grow-1"></main>
             </div>
-            <div class="col player"></div>
+            <div class="col player row justify-between">
+                <div class="col song-played row">
+                    <figure><img src="./img/sinister.jpeg" alt=""></figure>
+                    <div class="song-details grow-1">
+                        <div class="artist">Sinister</div>
+                        <div class="song">Brano Nome</div>
+                    </div>
+                    <i class="fa-regular fa-heart icon-grey heart-icon"></i>
+                    <i class="fa-regular fa-folder icon-grey"></i>
+                </div>
+                <div class="col flex-col player-control">
+                    <div class="col">
+                        <ul class="row justify-center player-functions">
+                            <li><a href=""><i class="fa-solid fa-shuffle icon-white"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-backward-step icon-white"></i></a></li>
+                            <li><a href=""><i class="fa-regular fa-circle-play icon-white play-button"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-forward-step icon-white"></i></a></li>
+                            <li><a href=""><i class="fa-solid fa-rotate-right icon-white"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col player-bar row justify-between">
+                        <span>0:25</span>
+                        <a href="" class="grow-1 song-time">
+                                <div class="current-time"></div>
+                        </a>    
+                        <span>4:35</span>
+                    </div>
+                </div>
+                <div class="col song-options row">
+                    <i class="fa-solid fa-list-ul icon-white"></i>
+                    <i class="fa-solid fa-display icon-white"></i>
+                    <i class="fa-solid fa-volume-high icon-white"></i>
+                </div>
+            </div>
         </div>
     </div>
     

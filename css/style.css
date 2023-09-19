@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 img{
     width: 100%;
 }
@@ -21,6 +25,10 @@ body{
     flex-direction: column;
 }
 
+ul,ol,menu{
+    list-style: none;
+}
+
 /* LAYOUT */
 
 .container-lg{
@@ -29,6 +37,112 @@ body{
 
 .sidebar{
     width: 230px;
+}
+
+.artist{
+    color: white;
+    font-weight: 800;
+}
+
+.song{
+    color: var(--song-grey);
+    font-weight: 600;
+}
+
+/* SIDEBAR*/
+
+.sidebar{
+    background-color: black;
+}
+
+/* PLAYER */
+
+.player{
+    background-color: var(--dark-grey);
+    padding: 10px 10px 25px;
+}
+
+/* PLAYER - LEFT*/
+
+.song-played{
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    width: 230px;
+}
+
+.song-played img{
+    width: 43px;
+}
+
+.player .artist{
+    font-size: 12px;
+}
+
+.player .song{
+    font-size: 10px;
+}
+
+.heart-icon{
+    padding: 0 5px;
+}
+
+/* PLAYER - MIDDLE*/
+
+.player-control{
+    width: 50%;
+    row-gap: 10px;
+}
+
+.player-functions{
+    gap: 20px;
+    align-items: center;
+}
+
+.player-functions{
+    font-size: 20px;
+}
+
+.play-button{
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+.player-bar{
+    align-items: center;
+    color: var(--dark-white);
+}
+
+.song-time{
+    height: 4px;
+    background-color: var(--grey);
+    border-radius: 999px;
+    position: relative;
+    margin: 0 25px;
+}
+
+.current-time{
+    height: 4px;
+    background-color: var(--light-grey);
+    border-radius: 999px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc((100% * 0.25) / 4.35);
+}
+
+.player-bar *{
+    font-weight: 800;
+    font-size: 9px;
+}
+
+/* PLAYER RIGHT*/
+
+.song-options{
+    width: 230px;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
 }
 
 /* UTILITY CLASSES */
@@ -41,13 +155,35 @@ body{
     height: 100%;
 }
 
-/* DEBUG */
-
-body{
-    border: 2px solid blue;
-    padding: 10px;
+.justify-between{
+    justify-content: space-between;
 }
 
+.justify-center{
+    justify-content: center;
+}
+
+.icon-white{
+    color: var(--white);
+}
+
+.icon-grey{
+    color: var(--icon-grey);
+}
+
+/* PLAETTE */
+
+:root{
+    --white: #FFFFFF;
+    --dark-grey: #282828;
+    --dark-white: #DDDDDD;
+    --song-grey: #747474;
+    --grey: #5A5A5A;
+    --light-grey: #C1C1C1;
+    --icon-grey: #696969;
+}
+
+/* DEBUG */
 .debug [class^="container"]{
     border: 2px solid green;
     padding: 10px;
@@ -61,6 +197,5 @@ body{
 
 .debug [class^="col"]{
     border: 2px solid black;
-    min-height: 200px;
     padding: 10px;
 }
