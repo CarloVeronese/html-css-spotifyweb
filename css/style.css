@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    height: 100vh;
+}
+
+/* DEBUG */
+
+body{
+    border: 1px solid blue;
+}
+
+.debug [class^="container"]{
+    border: 1px solid green;
+}
+
+.debug .row{
+    border: 1px solid yellow;
+}
+
+.debug [class^="col"]{
+    border: 1px solid black;
+}
