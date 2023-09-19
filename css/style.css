@@ -12,20 +12,55 @@ body{
     height: 100vh;
 }
 
+.row{
+    display: flex;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LAYOUT */
+
+.container-lg{
+    width: 100%;
+}
+
+.sidebar{
+    width: 230px;
+}
+
+/* UTILITY CLASSES */
+
+.grow-1{
+    flex-grow: 1;
+}
+
+.height-100{
+    height: 100%;
+}
+
 /* DEBUG */
 
 body{
-    border: 1px solid blue;
+    border: 2px solid blue;
+    padding: 10px;
 }
 
 .debug [class^="container"]{
-    border: 1px solid green;
+    border: 2px solid green;
+    padding: 10px;
 }
 
-.debug .row{
-    border: 1px solid yellow;
+.debug .row,
+.debug .flex-col{
+    border: 2px solid yellow;
+    padding: 10px;
 }
 
 .debug [class^="col"]{
-    border: 1px solid black;
+    border: 2px solid black;
+    min-height: 200px;
+    padding: 10px;
 }
