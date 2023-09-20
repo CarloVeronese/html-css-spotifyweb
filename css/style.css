@@ -209,12 +209,11 @@ a{
 
 .menu-item{
     gap: 5px;
-    margin: 0 -20px;
-    padding: 0 20px;
 }
 
 .menu-item-home{
-    border-left: 3px solid var(--green);
+    /* border-left: 3px solid var(--green); */
+    box-shadow: inset 3px 0 0 0 var(--green);
 }
 
 .menu-icon{
@@ -391,6 +390,10 @@ a{
     .profile-name{
         display: none;
     }
+    .menu-item-home{
+        margin-left:-10px;
+        padding-left:10px;
+    }
 }
 
 @media (min-width: 768px){
@@ -424,6 +427,10 @@ a{
     }
     .profile-name{
         display: block;
+    }
+    .menu-item-home{
+        margin-left:-20px;
+        padding-left:20px;
     }
 }
 
