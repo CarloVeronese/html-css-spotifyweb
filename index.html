@@ -10,49 +10,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <title>Spotify</title>
 </head>
-<body class="debugg">
-    <div class="container-lg height-100">
-        <div class="flex-col height-100">
-            <div class="col grow-1 row body-content">
-                <div class="col sidebar"></div>
-                <main class="col grow-1"></main>
-            </div>
-            <div class="col player row justify-between">
-                <div class="col song-played row">
-                    <figure><img src="./img/sinister.jpeg" alt=""></figure>
-                    <div class="song-details grow-1">
-                        <div class="artist">Sinister</div>
-                        <div class="song">Brano Nome</div>
+<body>
+    <div id="app" class="over-hidden">
+        <div class="container-lg height-100">
+            <div class="flex-col height-100">
+                <div class="col grow-1 row app-content over-hidden">
+                    <div class="col sidebar over-hidden">
+                        <div class="flex-col sidebar-content">
+                            <div class="div spotify-logo">
+                                <a href="" class="logo-big"><img src="./img/logo.svg" alt=""></a>
+                                <a href="" class="logo-small"><img src="./img/logo-small.svg" alt=""></a>
+                            </div>
+                            <ul class="sidebar-menu flex-col">
+                                <li class="row items-center menu-item">
+                                    <img src="./img/home.svg" alt="" class="menu-icon">
+                                    <h4>Home</h4>
+                                </li>
+                                <li class="row items-center menu-item">
+                                    <img src="./img/search.svg" alt="" class="menu-icon">
+                                    <h4>Cerca</h4>
+                                </li>
+                                <li class="row items-center menu-item">
+                                    <img src="./img/libreria.svg" alt="" class="menu-icon">
+                                    <h4>La tua libreria</h4>
+                                </li>
+                            </ul>
+                            <div class="grow-1">
+                                <div class="playlist flex-col">
+                                    <h2>PLAYLIST</h2>
+                                    <div class="add row">
+                                        <i class="fa-solid fa-square-plus"></i>
+                                        <h4>Crea Playlist</h4>
+                                    </div>
+                                    <ul class="flex-col playlist-name">
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                        <li><h4>Nome Playlist</h4></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex-col">
+                                <div class="install row">
+                                    <a href=""><i class="fa-regular fa-circle-down"></i></a>
+                                    <h4 class="install-text">Installa app</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <i class="fa-regular fa-heart icon-grey heart-icon"></i>
-                    <i class="fa-regular fa-folder icon-grey"></i>
+                    <main class="col grow-1"></main>
                 </div>
-                <div class="col flex-col player-control">
-                    <div class="col">
-                        <ul class="row justify-center player-functions">
-                            <li><a href=""><i class="fa-solid fa-shuffle icon-white"></i></a></li>
-                            <li><a href=""><i class="fa-solid fa-backward-step icon-white"></i></a></li>
-                            <li><a href=""><i class="fa-regular fa-circle-play icon-white play-button"></i></a></li>
-                            <li><a href=""><i class="fa-solid fa-forward-step icon-white"></i></a></li>
-                            <li><a href=""><i class="fa-solid fa-rotate-right icon-white"></i></a></li>
-                        </ul>
+                <aside class="col player row justify-between">
+                    <div class="col song-played row items-center">
+                        <div class="album row grow-1">
+                            <img src="./img/sinister.jpeg" alt="" class="album-cover">
+                            <div class="song-details grow-1 flex-col justify-center">
+                                <h4 class="artist-album">Sinister</h4>
+                                <p class="song-album">Brano Nome</p>
+                            </div>
+                        </div>
+                        <div class="album-options row">
+                            <i class="fa-regular fa-heart icon-grey heart-icon"></i>
+                            <i class="fa-regular fa-folder icon-grey"></i>
+                        </div>
                     </div>
-                    <div class="col player-bar row justify-between">
-                        <span>0:25</span>
-                        <a href="" class="grow-1 song-time">
-                                <div class="current-time"></div>
-                        </a>    
-                        <span>4:35</span>
+                    <div class="col flex-col player-control over-hidden">
+                        <div class="col">
+                            <ul class="row justify-center items-center player-functions">
+                                <li><a href=""><i class="fa-solid fa-shuffle icon-white"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-backward-step icon-white"></i></a></li>
+                                <li><a href=""><i class="fa-regular fa-circle-play icon-white play-button"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-forward-step icon-white"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-rotate-right icon-white"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col player-bar row justify-between items-center">
+                            <div>0:25</div>
+                            <a href="" class="grow-1 select-bar">
+                                <div class="select-bar-current"></div>
+                                <div class="progress-handler"></div>
+                            </a>    
+                            <div>4:35</div>
+                        </div>
                     </div>
-                </div>
-                <div class="col song-options row">
-                    <i class="fa-solid fa-list-ul icon-white"></i>
-                    <i class="fa-solid fa-display icon-white"></i>
-                    <i class="fa-solid fa-volume-high icon-white"></i>
-                </div>
+                    <div class="col song-options row items-center">
+                        <i class="fa-solid fa-list-ul icon-white"></i>
+                        <i class="fa-solid fa-display icon-white"></i>
+                        <i class="fa-solid fa-volume-high icon-white"></i>
+                        <a href="" class="grow-1 select-bar">
+                            <div class="select-bar-current"></div>
+                            <div class="progress-handler"></div>
+                        </a>
+                    </div>
+                </aside>
             </div>
         </div>
-    </div>
-    
+    </div>    
 </body>
 </html>
