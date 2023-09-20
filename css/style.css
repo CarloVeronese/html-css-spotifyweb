@@ -185,6 +185,7 @@ a{
 /* SIDEBAR */
 
 .sidebar{
+    flex-shrink: 0;
     width: 50px;
     background-color: black;
 }
@@ -284,6 +285,30 @@ a{
     font-size: 14px;
 }
 
+/* MAIN */
+
+/* MAIN - UPGRADE */
+
+.upgrade{
+    padding: 20px 0;
+    background-color: var(--light-black);
+    display: flex;
+}
+
+.button{
+    border: 2px solid white;
+    border-radius: 999px;
+    width: fit-content;
+    line-height: 40px;
+    padding: 0 40px;
+}
+
+.button a{
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
 /* UTILITY CLASSES */
 
 .grow-1{
@@ -304,6 +329,10 @@ a{
 
 .justify-center{
     justify-content: center;
+}
+
+.justify-end{
+    justify-content: flex-end;
 }
 
 .icon-white{
@@ -358,6 +387,8 @@ a{
     --icon-grey: #696969;
     --profile-grey: #808080;
     --green: #ADFF2F;
+    --light-black: #080B12;
+    --dark-blue: #141922;
     --song-progress: calc((100% * 0.25) / 4.35);
     --volume-progress: calc(100% / 6);
 }
