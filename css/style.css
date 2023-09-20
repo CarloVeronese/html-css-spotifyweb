@@ -253,6 +253,24 @@ a{
     color: var(--menu-white);
 }
 
+.profile{
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.profile-image{
+    width: 25px;
+    background-color: var(--profile-grey);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.profile-name{
+    color: white;
+    font-size: 14px;
+}
+
 /* UTILITY CLASSES */
 
 .grow-1{
@@ -283,9 +301,9 @@ a{
     color: var(--icon-grey);
 }
 
-/* .icon-menu{
-    color: var(--menu-white);
-} */
+.point{
+    cursor: pointer;
+}
 
 .over-hidden{
     overflow: hidden;
@@ -302,6 +320,7 @@ a{
     --grey: #5A5A5A;
     --light-grey: #C1C1C1;
     --icon-grey: #696969;
+    --profile-grey: #808080;
     --green: #ADFF2F;
     --song-progress: calc((100% * 0.25) / 4.35);
     --volume-progress: calc(100% / 6);
@@ -332,6 +351,9 @@ a{
     .install-text{
         display: none;
     }
+    .profile-name{
+        display: none;
+    }
 }
 
 @media (min-width: 768px){
@@ -339,7 +361,7 @@ a{
         width: 230px;
     }
     .sidebar-content{
-        padding: 20px;
+        padding: 20px 20px 6px;
     }
     .logo-big{
         display: block;
@@ -361,6 +383,9 @@ a{
         border-bottom: 1px solid var(--menu-white);
     }
     .install-text{
+        display: block;
+    }
+    .profile-name{
         display: block;
     }
 }
