@@ -209,6 +209,12 @@ a{
 
 .menu-item{
     gap: 5px;
+    margin: 0 -20px;
+    padding: 0 20px;
+}
+
+.menu-item-home{
+    border-left: 3px solid var(--green);
 }
 
 .menu-icon{
@@ -336,7 +342,7 @@ a{
 }
 
 .play-button:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* PALETTE */
