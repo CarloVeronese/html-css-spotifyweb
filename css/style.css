@@ -219,8 +219,16 @@ a{
 }
 
 .menu-item-home{
-    /* border-left: 3px solid var(--green); */
-    box-shadow: inset 3px 0 0 0 var(--green);
+    position: relative;
+}
+
+.menu-item-home::before{
+    content: "";
+    display: block;
+    height: 100%;
+    background-color:var(--green);
+    width: 2px;
+    position: absolute;
 }
 
 .menu-icon{
@@ -304,7 +312,7 @@ main{
 /* MAIN - UPGRADE */
 
 .upgrade{
-    padding: 20px 0;
+    padding: 20px 5px;
     background-color: var(--light-black);
     display: flex;
 }
@@ -370,7 +378,8 @@ main{
 }
 
 .album-image{
-    padding-bottom: 8px;
+    margin-bottom: 8px;
+    position: relative;
 }
 
 .album-title{
@@ -399,8 +408,35 @@ main{
     padding-top: 15px;
 }
 
+.pop-artists .album-image{
+    margin-bottom: 0;
+}
+
 .pop-artists .album-image img{
     border-radius: 50%;
+}
+
+.highlight{
+    position: relative;
+}
+
+.highlight::after{
+    display: block;
+    content: '';
+    width: 30%;
+    border-bottom: 2px solid var(--green);
+    position: absolute;
+    bottom: -5px;
+    left: 35%;
+}
+
+.album-play{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    font-size: 80px;
+    z-index: -1;
 }
 
 /* UTILITY CLASSES */
@@ -450,7 +486,12 @@ main{
 }
 
 .over-auto{
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.side-margin{
+    margin-left: var(--desktop-padding);
 }
 
 /* HOVER */
@@ -473,6 +514,22 @@ main{
 
 .play-button:hover{
     transform: scale(1.1);
+}
+
+.upgrade .button:hover{
+    transform: scale(1.1);
+}
+
+.nav-bar-item:hover{
+    color: white;
+}
+
+.col-album:hover .album-image img{
+    opacity: 0.5;
+}
+
+.col-album:hover .album-play{
+    z-index: 2;
 }
 
 /* VARIABLES */
@@ -501,6 +558,8 @@ main{
     --col-2: calc((100% / 12) * 2);
     --col-3: calc((100% / 12) * 3);
     --col-6: calc((100% / 12) * 6);
+    /* padding */
+    --desktop-padding: 20px;
 }
 
 /* RESPONSIVE */
@@ -514,7 +573,10 @@ main{
         padding-bottom: 15px;
     }
     .sidebar-content{
-        padding: 5px 10px;
+        padding: 5px 0px;
+    }
+    .sidebar-content .row{
+        justify-content: center;
     }
     .sidebar-menu h4{
         display: none;
@@ -523,7 +585,7 @@ main{
         display: none;
     }
     .install{
-        justify-content: center;
+        margin-right: 0;
     }
     .install-text{
         display: none;
@@ -531,9 +593,14 @@ main{
     .profile-name{
         display: none;
     }
-    .menu-item-home{
-        margin-left:-10px;
-        padding-left:10px;
+    .menu-item-home::before{
+        display: none;
+    }
+    .side-margin{
+        margin-left: 0;
+    }
+    .col-album{
+        flex-basis: var(--col-6);
     }
 }
 
@@ -542,7 +609,10 @@ main{
         width: 230px;
     }
     .sidebar-content{
-        padding: 20px 20px 6px;
+        padding: 20px 0px 6px;
+    }
+    .sidebar-content .row{
+        justify-content: stretch;
     }
     .logo-big{
         display: block;
@@ -562,6 +632,7 @@ main{
     .install{
         justify-content: stretch;
         border-bottom: 1px solid var(--menu-grey);
+        margin-right: 20px;
     }
     .install-text{
         display: block;
@@ -569,15 +640,26 @@ main{
     .profile-name{
         display: block;
     }
-    .menu-item-home{
-        margin-left:-20px;
-        padding-left:20px;
+    .side-margin{
+        margin-left: var(--desktop-padding);
+    }
+    .menu-item-home::before{
+        display: block;
     }
 }
 
 @media (min-width: 992px){
     .album-options{
         flex-direction: row;    
+    }
+    .col-album{
+        flex-basis: var(--col-3);
+    }
+}
+
+@media (min-width: 1200px){
+    .col-album{
+        flex-basis: var(--col-2);
     }
 }
 
